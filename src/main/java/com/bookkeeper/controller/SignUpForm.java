@@ -1,7 +1,7 @@
 package com.bookkeeper.controller;
 
-import com.bookkeeper.domain.Gender;
-import com.bookkeeper.domain.UserType;
+import com.bookkeeper.domain.user.Gender;
+import com.bookkeeper.domain.user.UserType;
 import lombok.Getter;
 import lombok.Setter;
 

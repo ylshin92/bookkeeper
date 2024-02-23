@@ -1,0 +1,24 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/bookkeeper
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    datasource-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create #Deletes existing tables and creates new tables
+#      ddl-auto: update #Updates tables only with changes
+#      ddl-auto: none #Existing tables remain
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace

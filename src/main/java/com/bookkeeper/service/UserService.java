@@ -1,6 +1,6 @@
 package com.bookkeeper.service;
 
-import com.bookkeeper.domain.User;
+import com.bookkeeper.domain.user.User;
 import com.bookkeeper.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

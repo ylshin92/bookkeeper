@@ -1,6 +1,6 @@
 package com.bookkeeper.repository;
 
-import com.bookkeeper.domain.User;
+import com.bookkeeper.domain.user.User;
 import jakarta.persistence.EntityManager;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

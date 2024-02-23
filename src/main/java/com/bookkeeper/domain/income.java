@@ -1,42 +1,34 @@
 package com.bookkeeper.domain;
 
+import com.bookkeeper.domain.user.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-
 
 @Entity
 @Getter
 @Setter
-public class User {
+public class income {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
+    @Column(name = "income_id")
     private Long id;
 
-    @Column
-    private String email;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name= "user_id")
+    private User user;
 
     @Column
-    private String password;
+    private String detail_income_id;
 
     @Column
-    private String name;
+    private LocalDateTime income_dt;
 
     @Column
-    private LocalDate birthdate;
-
-    @Column
-    @Enumerated(EnumType.STRING)
-    private Gender gender; //female, male
-
-    @Column
-    @Enumerated(EnumType.STRING)
-    private UserType userType; //admin, user
+    private int income_amount;
 
     @Column
     private LocalDateTime reg_dt;
@@ -46,5 +38,6 @@ public class User {
 
     @Column
     private LocalDateTime delete_dt;
+
 
 }
